@@ -15,7 +15,7 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', function () {
-    return view('showpengguna');
+    return view('inputpengguna');
 });
 Route::get('/showpengguna', [UserController::class, 'index'])->name('showpengguna.index');
 Route::get('/inputpengguna', [UserController::class, 'create'])->name('inputpengguna.create');

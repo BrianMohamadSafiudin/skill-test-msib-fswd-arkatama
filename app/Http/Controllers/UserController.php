@@ -10,12 +10,12 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('showpengguna.index', ['users' => $users]);
+        return view('showpengguna', $users);
     }
 
     public function create()
     {
-        return view('inputpengguna.create');
+        return view('inputpengguna');
     }
 
     public function store(Request $request)
@@ -30,6 +30,6 @@ class UserController extends Controller
             'city' => $city,
         ]);
 
-        return redirect()->route('inputpengguna.index')->with('success', 'Data pengguna berhasil disimpan.');
+        return redirect()->route('inputpengguna.create')->with('success', 'Data pengguna berhasil disimpan.');
     }
 }
