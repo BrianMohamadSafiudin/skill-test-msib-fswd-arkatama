@@ -15,5 +15,10 @@
         <input type="text" name="data" required>
         <button type="submit">Simpan</button>
     </form>
+
+    <br>
+    <a href="{{ route('showpengguna.index') }}">
+        <button>Kembali</button><br><br>
+    </a>
 </body>
 </html>

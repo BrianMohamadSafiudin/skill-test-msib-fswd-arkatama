@@ -3,7 +3,12 @@
     <title>Data Pengguna</title>
 </head>
 <body>
+
     <h1>Data Pengguna</h1>
+
+    <a href="{{ route('inputpengguna.create') }}">
+        <button>Tambah Data</button><br><br>
+    </a>
 
     <table border="1">
         <tr>
