@@ -21,15 +21,20 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $input = $request->input('data');
-        list($name, $age, $city) = explode(' ', strtoupper($input), 3);
-        $age = preg_replace('/\b(TAHUN|THN|TH)\b/i', '', $age);
 
-        User::create([
-            'name' => $name,
-            'age' => $age,
-            'city' => $city,
-        ]);
+        $values = explode(' ', strtoupper($input));
+
+        $name = $values[0] ?? '';
+        $age = preg_replace('/\D/', '', $values[1] ?? '');
+        $city = $values[2] ?? '';
+
+        $users = new User();
+        $users->name = $name;
+        $users->age = $age;
+        $users->city = $city;
+        $users->save();
 
         return redirect()->route('inputpengguna.create')->with('success', 'Data pengguna berhasil disimpan.');
     }
+
 }
