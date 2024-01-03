@@ -10,15 +10,15 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         User::create([
-        'name' => 'Brian Mohamad',
+            'name' => 'BRIAN MOHAMAD',
             'age' => 30,
-            'city' => 'Jakarta',
+            'city' => 'KEDIRI',
         ]);
 
         User::create([
-            'name' => 'Safiudin',
+            'name' => 'SAFIUDIN',
             'age' => 25,
-            'city' => 'Surabaya',
+            'city' => 'SURABAYA',
         ]);
 
     }
